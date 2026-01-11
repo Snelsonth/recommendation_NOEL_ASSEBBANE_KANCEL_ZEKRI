@@ -7,7 +7,6 @@ Projet de recommandation top-K (top-10) sur **MovieLens 20M**, comparant :
 
 **Auteurs** : Noel Snelson, Jonathan, Ibrahim, Rayane
 
----
 
 ## Objectif
 
@@ -15,7 +14,6 @@ Construire un système de recommandation **top-10** à partir des métadonnées 
 
 **Métriques principales** : Recall@K, NDCG@K (K ∈ {5, 10, 20}).
 
----
 
 ## Données
 
@@ -29,7 +27,7 @@ Fichiers principaux utilisés :
 Optionnel :
 - genome tags/scores (désactivé par défaut dans le notebook)
 
----
+
 
 ## Pré-traitement (pipeline)
 
@@ -43,7 +41,7 @@ Optionnel :
    - les interactions les plus récentes (20%) → test
    - le reste → train
 
----
+
 
 ## Modèles évalués
 
@@ -67,7 +65,7 @@ Formule : `score = α * cosine + (1-α) * popularity` avec **α = 0.7**.
 - Cornac MF
 - Cornac BPR
 
----
+
 
 ## Résultats (run complet)
 
@@ -84,7 +82,6 @@ Résumé (top-10) :
 
 Les résultats détaillés (Recall/NDCG/MAP/HR pour K=5/10/20) sont exportés dans `results_summary.csv`.
 
----
 
 ## Reproductibilité
 
@@ -94,7 +91,6 @@ Le notebook exporte automatiquement :
 
 Les embeddings peuvent être mis en cache dans `embeddings_cache/` pour éviter de recalculer.
 
----
 
 ## Exécution
 
@@ -109,7 +105,7 @@ Le notebook installe notamment :
 - cornac
 - torch, pandas, numpy, scikit-learn
 
----
+
 
 ## Structure du dépôt (recommandée)
 
@@ -119,7 +115,7 @@ Le notebook installe notamment :
 - `run_config.json` : configuration (export)
 - `embeddings_cache/` : cache embeddings (optionnel, à ignorer sur Git)
 
----
+
 
 ## Description courte du dépôt (pour GitHub)
 Dépôt de rendu du projet de recommandation : MovieLens 20M, comparaison embeddings (content-based) vs baselines collaboratives (Cornac MF/BPR), avec évaluation top-K et export des résultats.
@@ -127,7 +123,7 @@ Dépôt de rendu du projet de recommandation : MovieLens 20M, comparaison embedd
 ## Description du fichier CSV (results_summary.csv)
 Ce fichier regroupe un tableau des métriques obtenues par les différents modèles (Recall/NDCG/MAP/HR pour plusieurs valeurs de K).
 
----
+
 
 ## Référence
 MovieLens : Harper & Konstan (2015).
